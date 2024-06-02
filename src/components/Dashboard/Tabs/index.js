@@ -1,11 +1,11 @@
-// import * as React from 'react';
 import React, { useState } from "react";
-// import div from '@mui/material/div';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import {Box, createTheme, ThemeProvider} from '@mui/material';
+import Grid from "../Grid";
+import "./styles.css";
 
 
 const theme = createTheme({
@@ -26,7 +26,7 @@ const style = {
     textTransform: "capitalize"
 }
 
-export default function TabsComponent() {
+export default function TabsComponent({coins}) {
   const [value, setValue] = useState('grid');
 
   const handleChange = (event, newValue) => {
@@ -41,8 +41,18 @@ export default function TabsComponent() {
             <Tab label="Grid" value="grid" sx = {style}/>
             <Tab label="List" value="list" sx = {style}/>
           </TabList>
-        <TabPanel value="grid">Grid</TabPanel>
-        <TabPanel value="list">List</TabPanel>
+        <TabPanel value="grid">
+            <div className="grid-flex">
+              {coins.map((coin, i) => {
+                return  <Grid coin = {coin}/>
+              })}
+            </div>
+        </TabPanel>
+        <TabPanel value="list">
+          <div>{coins.map((item,id) => {
+            return <p key = {id}>{id}, {item.name}</p>
+          })}</div>
+        </TabPanel>
       </TabContext>
     </ThemeProvider>
   );

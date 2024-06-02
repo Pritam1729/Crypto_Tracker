@@ -8,6 +8,7 @@
     "@mui/icons-material": "^5.15.19",
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.19",
+    "axios": "^1.7.2",
     "framer-motion": "^10.0.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
