@@ -1,0 +1,52 @@
+.btn {
+    background-color: var(--blue);
+    color:white;
+    padding:0.5rem 1.5rem;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid var(--blue);
+    text-align:center;
+    min-width: 100px;
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    box-shadow: 5px 5px 10px rgba(58,128,233,0.5);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.outlined-btn {
+    background-color: var(--black);
+    color:white;
+    border:2px solid var(--blue);
+    padding:0.5rem 1.5rem;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align:center;
+    min-width: 100px;
+    text-transform: capitalize;
+}
+
+.outlined-btn:hover {
+    background-color:var(--blue);
+    box-shadow: 5px 5px 10px rgba(58,128,233,0.5);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
