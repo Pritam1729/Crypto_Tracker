@@ -1,6 +1,5 @@
 .grid-container {
-    width: 350px;
-    height: 350px;
+    width: 300px;
     background-color: var(--darkgrey);
     border: 2px solid var(--darkgrey);
     border-radius: 0.75rem;
@@ -8,6 +7,27 @@
     -moz-border-radius: 0.75rem;
     -ms-border-radius: 0.75rem;
     -o-border-radius: 0.75rem;
+}
+
+.grid-container:hover {
+    border-color: var(--green);
+    scale:1.05;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+
+}
+
+.grid-container-red:hover {
+    border-color:var(--red);
+    scale: 1.05;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
 }
 
 .info-flex {
@@ -45,3 +65,118 @@
     font-size:1rem;
     margin:0;
 }
+
+.chip-flex {
+    display: flex;
+    justify-content: flex-start;
+    gap:1rem;
+    align-items:center;
+    margin:1rem 1.5rem
+}
+
+.price-chip-green {
+    border: 2px solid var(--green);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    padding: 0.35rem 1.25rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--green);
+}
+
+.price-chip-red {
+    border: 2px solid var(--red);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    padding: 0.35rem 1.25rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--red);
+}
+
+.chip-red {
+    border: 2px solid var(--red) !important;
+    color: var(--red) !important;
+
+}
+
+.icon-chip {
+    border: 2px solid var(--green);
+    border-radius: 50%;;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    height: 2rem;
+    width:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--green);
+    font-size:1.1rem;
+}
+
+.price-chip-green:hover {
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.price-chip-red:hover {
+    background-color: var(--red);
+    color: var(--white);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.icon-chip:hover {
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.chip-red:hover {
+    background-color: var(--red) !important;
+    color:var(--white) !important;
+    transition: all 0.3s !important;
+    -webkit-transition: all 0.3s !important;
+    -moz-transition: all 0.3s !important;
+    -ms-transition: all 0.3s !important;
+    -o-transition: all 0.3s !important;
+}
+
+.info-container {
+    margin:1.5rem;
+}
+
+.info-container h3 {
+    color:var(--green);
+    font-size: 1.2rem;
+    font-weight: 600
+}
+
+.total_volume {
+    color:var(--grey);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
