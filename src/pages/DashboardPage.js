@@ -15,7 +15,6 @@ function DashboardPage() {
   useEffect(() => {
     axios(url, options)
       .then(response => {
-        console.log(response.data);
         setCoins(response.data);
       })
       .catch(error => {

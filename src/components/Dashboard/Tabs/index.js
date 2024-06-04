@@ -5,6 +5,7 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import {Box, createTheme, ThemeProvider} from '@mui/material';
 import Grid from "../Grid";
+import List from "../List";
 import "./styles.css";
 
 
@@ -49,9 +50,11 @@ export default function TabsComponent({coins}) {
             </div>
         </TabPanel>
         <TabPanel value="list">
-          <div>{coins.map((item,id) => {
-            return <p key = {id}>{id}, {item.name}</p>
-          })}</div>
+          <table className = "list-table">
+            {coins.map((coin,i) => {
+              return  <List coin = {coin} key = {i}/>
+            })}
+          </table>
         </TabPanel>
       </TabContext>
     </ThemeProvider>
