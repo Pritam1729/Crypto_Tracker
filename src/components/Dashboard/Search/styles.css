@@ -1,0 +1,32 @@
+.search-flex {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:1.5rem;
+    padding: 1rem 3rem;
+    color: var(--grey);
+    background-color: var(--darkgrey);
+    width:80%;
+    margin:1rem;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius: 3rem;;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+}
+
+.search-flex input {
+    width:100%;
+    background-color: var(--darkgrey);
+    font-family: 'Inter';
+    font-size: 1.2rem;
+    color:var(--grey);
+    border:none;
+}
+
+.search-flex input:focus {
+    outline:none;
+    font-size:1.2rem
+}
