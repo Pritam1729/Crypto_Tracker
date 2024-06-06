@@ -5,9 +5,9 @@ import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import Tooltip from '@mui/material/Tooltip';
 import { convertNumbers } from '../../../functions/convertNunbers';
 
-function List({coin}) {
+function List({coin,hover}) {
   return (
-        <tr className = "list-row">
+        <tr className = {hover?"list-row":"no-hover-list"}>
           <Tooltip title="image">
             <td className = "td-image">
               <img src = {coin.image} className = "coin-logo font-change"></img>

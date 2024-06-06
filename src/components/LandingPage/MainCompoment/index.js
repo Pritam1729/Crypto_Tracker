@@ -4,6 +4,8 @@ import Button from '../../Common/Button'
 import iphone from '../../../assets/iphone.png'
 import gradient from '../../../assets/gradient.png'
 import { motion } from "framer-motion"
+import { Link } from 'react-router-dom'
+
 function MainComponent() {
   return (
     <div className = "flex-info">
@@ -20,8 +22,8 @@ function MainComponent() {
                 Track crypto through a public api in real time. Visit the dashboard to do so!
             </motion.p>
             <motion.div className= "btn-flex" initial={{opacity:0,x:50}} animate={{opacity:1,x:0}} transition={{transition:1,delay:1}}>
-                <Button text = {"Dashboard"} />
-                <Button text = {"Share"} outlined={true} />
+                <Link to = "/dashboard"><Button text = {"Dashboard"} onClick={()=>console.log("you click me")}/></Link>
+                <Link to = "/compare"><Button text = {"Share"} outlined={true} onClick={()=>console.log("you click me")}/></Link>
             </motion.div>
         </div>
         <div className = "phone-container">

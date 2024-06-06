@@ -3,6 +3,7 @@ import './App.css';
 import HomePage from './pages/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DashboardPage from './pages/DashboardPage';
+import CoinPage from './pages/Coin';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/dashboard" element={<DashboardPage/>}/>
+        <Route path="/coin/:coinID" element={<CoinPage/>}/>
       </Routes>
     </BrowserRouter>
   </div>;

@@ -52,7 +52,7 @@ export default function TabsComponent({coins}) {
         <TabPanel value="list">
           <table className = "list-table">
             {coins.map((coin,i) => {
-              return  <List coin = {coin} key = {i}/>
+              return  <List coin = {coin} hover = {true} key = {i}/>
             })}
           </table>
         </TabPanel>
