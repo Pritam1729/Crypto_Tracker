@@ -43,7 +43,7 @@ function List({coin,hover}) {
             </td>
           )}
           </Tooltip>
-          <Tooltip>
+          <Tooltip title = "current price">
             <td>
               <h3 className = "coin-price td-center-align td-total-volume font-change" style = {{color: coin.price_change_percentage_24h.toFixed(2)>=0?"var(--green)":"var(--red)"}}>${coin.current_price.toLocaleString()}</h3>
             </td>

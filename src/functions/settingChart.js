@@ -9,7 +9,7 @@ export const setChartData = (setChartDate,prices) => {
                     data: prices.map((item) => item[1]),
                     borderColor: "#3a80e9",
                     backgroundColor: "transparent",
-                    borderWidth: 1,
+                    borderWidth: 3,
                     fill: true,
                     tension: 0.25,
                     backgroundColor: "rgba(58, 128, 233, 0.1)",

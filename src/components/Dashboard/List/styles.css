@@ -16,8 +16,10 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
+    font-size:1.5rem;
     gap:0.5rem;
-    margin:1.5rem;
+    height:6rem;
+    margin:1.2rem;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
@@ -77,12 +79,45 @@
 
 @media only screen and (max-width: 1050px) {
     .font-change {
-        font-size: 70% !important;
+        font-size: 60% !important;
+    }
+
+    .list-row .td-image {
+        margin-right:1rem;
+    }
+
+    .no-hover-list .td-image {
+        margin-right:0
     }
 
     .price-chip {
         width:40%;
         height:40%;
+        margin-right:0rem;
+    }
+
+    .list-row .chip-flex {
+        margin:1rem;
+    }
+
+    .no-hover-list .chip-flex {
+        margin:0;
+    }
+
+
+
+    .no-hover-list {
+        padding-left:0;
+        margin-left:0;
+        margin-right:0;
+        gap:0.8rem;
+    }
+
+    .list-row {
+        padding-left:0;
+        margin-left:0;
+        margin-right:0;
+        gap:0rem;
     }
 
     .volume-coin {

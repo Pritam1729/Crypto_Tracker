@@ -127,3 +127,17 @@ a {
 }
 
 
+.line-chart {
+  display: block;
+  background-color: var(--darkgrey);
+  width:90%;
+  margin:1.5rem auto;
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+  padding: 1rem 1rem;
+}
+
+

@@ -76,6 +76,8 @@
 
 .price-chip-green {
     border: 2px solid var(--green);
+    justify-content: center;
+    align-items: center;
     border-radius: 2rem;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
@@ -92,6 +94,9 @@
 .price-chip-red {
     border: 2px solid var(--red);
     border-radius: 2rem;
+    justify-content: center;
+    display:flex;
+    align-items: center;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
