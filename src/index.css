@@ -140,4 +140,17 @@ a {
   padding: 1rem 1rem;
 }
 
+.coin-days-flex {
+  display:flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  align-items:center;
+  margin-left: 5%;
+  gap:1.5rem;
+  padding-left:0;
+
+}
+
+
+
 

@@ -10,7 +10,7 @@ import { getCoinPrices } from '../functions/getCoinPrices';
 import LineChart from '../components/Coin/LineChart';
 import SelectDays from '../components/Coin/SelectDays';
 import { setChartData } from '../functions/settingChart';
-import PriceType from '../components/Coin/Pricetype';
+import ToggleButtons from '../components/Coin/Pricetype';
 
 function CoinPage() {
     const { coinID } = useParams();
@@ -34,7 +34,6 @@ function CoinPage() {
         }
         const prices = await getCoinPrices(coinID,days,pricetype);
         if(prices.length > 0) {
-            // console.log(prices)
             setChartData(setChartDate, prices);
             setLoading(false)
         }
@@ -69,8 +68,8 @@ function CoinPage() {
                 </div>
                 <div className = "grey-wrapper line-chart">
                     <SelectDays days = {days} handledaychange={handlechange}/>
-                    <PriceType prices = {pricetype} handlepricetypechange={handlepricetypechange}/>
-                    <LineChart chartData={chartData} pricetype = {pricetype}/>
+                    <ToggleButtons prices = {pricetype} handlepricetypechange={handlepricetypechange}/>
+                    <LineChart chartData={chartData} pricetype = {pricetype} multiAxis={false}/>
                 </div>
                 <CoinInfo heading = {coinData.name} desc = {coinData.desc}/>
             </>}

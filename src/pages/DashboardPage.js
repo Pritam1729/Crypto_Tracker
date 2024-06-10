@@ -6,6 +6,7 @@ import Search from '../components/Dashboard/Search';
 import PaginationComponent from '../components/Dashboard/Pagination';
 import Loader from '../components/Common/Loader';
 import BackToTop from '../components/Common/BackToTop';
+import { get100coin } from '../functions/get100Coin';
 
 
 
@@ -37,17 +38,22 @@ function DashboardPage() {
 
 
   useEffect(() => {
-    axios(url, options)
-      .then(response => {
-        setCoins(response.data);
-        setPaginatedCoins(response.data.slice(0,10));
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('error:', error);
-        setLoading(false);
-      });
+    getData()
   }, []);
+
+
+  const getData = async () => {
+      const coindata = await get100coin();
+      if(coindata) {
+        setCoins(coindata);
+        setPaginatedCoins(coindata.slice(0,10));
+        setLoading(false);
+      }
+      else{
+        setLoading(false);
+        alert("Network Error")
+      }
+  }
 
   return (
     <>
