@@ -3,11 +3,12 @@ import "./styles.css"
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import { Link } from 'react-router-dom';
-
+import { motion } from "framer-motion"
 
 
 function Grid({coin}) {
   return (
+    <motion.p initial ={{opacity:0,y:50}} animate={{opacity:1,y:0}} transition={{transition:1, delay:0}}>
     <Link to = {`/coin/${coin.id}`}>
         <div className = {`grid-container ${
       coin.price_change_percentage_24h < 0 && "grid-container-red"
@@ -44,6 +45,7 @@ function Grid({coin}) {
         </div>
     </div>
     </Link>
+    </motion.p>
   );
 }
 

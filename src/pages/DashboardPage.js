@@ -7,6 +7,7 @@ import PaginationComponent from '../components/Dashboard/Pagination';
 import Loader from '../components/Common/Loader';
 import BackToTop from '../components/Common/BackToTop';
 import { get100coin } from '../functions/get100Coin';
+import Footer from '../components/Common/Footer';
 
 
 
@@ -31,9 +32,6 @@ function DashboardPage() {
     items.name.toLowerCase().includes(search.toLowerCase()) || items.symbol.toLowerCase().includes(search.toLowerCase())
   );
   
-
-  const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=100&x_cg_api_key=CG-ngu3LV1buWaxTyKDjQi3oU7f';
-  const options = {method: 'GET', headers: {accept: 'application/json'}};
 
 
 
@@ -68,7 +66,7 @@ function DashboardPage() {
       {!search && (<PaginationComponent page = {page} handlePageChange={handlePageChange}/>)}
     </div>
     )}
-    
+    {/* <Footer/> */}
     </>
   );
 }

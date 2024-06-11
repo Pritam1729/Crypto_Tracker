@@ -6,6 +6,7 @@ import TabPanel from '@mui/lab/TabPanel';
 import {Box, createTheme, ThemeProvider} from '@mui/material';
 import Grid from "../Grid";
 import List from "../List";
+import { motion } from "framer-motion"
 import "./styles.css";
 
 
@@ -34,10 +35,11 @@ export default function TabsComponent({coins}) {
     setValue(newValue);
   };
 
+  let time = 0;
+
   return (
     <ThemeProvider theme={theme}>
       <TabContext value={value}>
-        
           <TabList onChange={handleChange} aria-label="lab API tabs example" variant="fullWidth">
             <Tab label="Grid" value="grid" sx = {style}/>
             <Tab label="List" value="list" sx = {style}/>
@@ -45,14 +47,17 @@ export default function TabsComponent({coins}) {
         <TabPanel value="grid">
             <div className="grid-flex">
               {coins.map((coin, i) => {
-                return  <Grid coin = {coin} key = {i}/>
+                if(i == 0)  time = 0;
+                else time = time+0.1;
+                console.log(time);
+                return  <Grid className = "grid-com" coin = {coin} key = {i}/>
               })}
             </div>
         </TabPanel>
         <TabPanel value="list">
           <table className = "list-table">
             {coins.map((coin,i) => {
-              return  <List coin = {coin} hover = {true} key = {i}/>
+              return  <List coin = {coin} className= "list-com" hover = {true} key = {i}/>
             })}
           </table>
         </TabPanel>

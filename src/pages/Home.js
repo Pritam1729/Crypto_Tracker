@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/Common/Header'
 import MainComponent from '../components/LandingPage/MainCompoment'
+import Footer from '../components/Common/Footer'
 
 function HomePage() {
   return (

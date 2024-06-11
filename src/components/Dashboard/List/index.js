@@ -1,13 +1,32 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./styles.css"
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import Tooltip from '@mui/material/Tooltip';
 import { convertNumbers } from '../../../functions/convertNunbers';
 import { Link } from 'react-router-dom';
+import { motion, stagger, useAnimation, useInView } from "framer-motion"
 
 function List({coin,hover}) {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  const maincontrol = useAnimation();
+
+  useEffect(()=>{
+    if(isInView) maincontrol.start("visible");
+  },[isInView])
+
   return (
+        <motion.p 
+        ref = {ref}
+        variants = {{
+          hidden: {opacity:0,x:-50},
+          visible: {opacity:1,x:0}
+        }}
+         initial = "hidden" animate={maincontrol} transition={{transition:0.5, delay:0.1}}
+        >
         <Link to = {`/coin/${coin.id}`}>
           <tr className = {hover?"list-row":"no-hover-list"}>
           <Tooltip title="image">
@@ -66,6 +85,7 @@ function List({coin,hover}) {
 
         </tr>
         </Link>
+        </motion.p>
   )
 }
 

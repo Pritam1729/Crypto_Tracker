@@ -37,7 +37,8 @@ export const getCoinPrices = async (id, days, newType) => {
         const response = await axios(url2, options);
         return response.data[newType];
     } catch (error) {
-        console.error('Error:', error);
-        throw new Error("Network Error(Try Again After Some Time)");
+        // console.error('Error:', error);
+        // throw new Error("Network Error(Try Again After Some Time)");
+        alert("Network Error Try Again After Some Time");
     }
 };
